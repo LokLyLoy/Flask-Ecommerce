@@ -1,9 +1,9 @@
-from flask import jsonify, render_template
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask import render_template
 
 from app import app
 
-@app.route('/dashboard')
-@jwt_required()
+
+@app.route("/dashboard")
 def dashboard():
-    return render_template('page/dashboardpage.html'), 200
+    # Static dashboard page; authentication has been removed.
+    return render_template("page/dashboardpage.html"), 200
